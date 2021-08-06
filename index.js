@@ -19,8 +19,7 @@ checkButton.addEventListener("click", function validateBillAndCashAmount(){
 function calculateChange()
 
 function showMessage(message) {
-    message.style.display = "block";
-    message.innerText = message;
+   
        
 }
 
