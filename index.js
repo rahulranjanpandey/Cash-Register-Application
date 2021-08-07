@@ -16,10 +16,16 @@ checkButton.addEventListener("click", function validateBillAndCashAmount(){
     }
 });
 
-function calculateChange()
+//function calculateChange()
 
-function showMessage(message) {
-   
-       
+
+function hideMessage() {
+    message.style.display = "none";
+}
+
+function showMessage(msg) {
+    console.log("here");
+    message.style.dislay = "block";
+    message.innerText = msg;
 }
 
