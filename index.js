@@ -18,9 +18,14 @@ checkButton.addEventListener("click", function validateBillAndCashAmount(){
     }
 });
 
-//function calculateChange() {
+function calculateChange(amountToBeReturned) {
+        // go over all the available
     for (let i = 0; i < availableNotes.length; i++){
-        const numberOfNotes = Math.amountToBeReturned 
+        // no. of notes need for the denomination
+        const numberOfNotes = Math.trunc(amountToBeReturned / availableNotes[i]);
+        // amount left after calculating the number of notes needed
+        amountToBeReturned %= availableNotes[i];
+        noOfNotes[i].innerText = numberOfNotes;
     }
 }
 
