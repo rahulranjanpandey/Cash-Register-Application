@@ -37,7 +37,6 @@ function hideMessage() {
 }
 
 function showMessage(msg) {
-    console.log("here");
     message.style.dislay = "block";
     message.innerText = msg;
 }
