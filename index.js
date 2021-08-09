@@ -7,6 +7,7 @@ const noOfNotes = document.querySelectorAll(".no-of-notes");
 const availableNotes = [2000, 500, 100, 20, 10, 5, 1];
 
 checkButton.addEventListener("click", function validateBillAndCashAmount(){
+    hideMessage();
     if(billAmount.value > 0) {
         if (cashGiven.value >= billAmount.value) {
             const amountToBeReturned = cashGiven.value - billAmount.value;
@@ -25,7 +26,7 @@ function calculateChange(amountToBeReturned) {
         // no. of notes need for the denomination
         const numberOfNotes = Math.trunc(amountToBeReturned / availableNotes[i]);
         // amount left after calculating the number of notes needed
-        amountToBeReturned %= availableNotes[i];
+        amountToBeReturned = amountToBeReturned % availableNotes[i];
         noOfNotes[i].innerText = numberOfNotes;
     }
 }
